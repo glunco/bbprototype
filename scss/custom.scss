@@ -1,0 +1,740 @@
+
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,400italic,300italic,700,900);
+@import url(../css/fonts.css);
+
+/*--Define Colors--*/
+
+$grey: #1A1A1A;
+$white: #fff;
+$green: #00502F;
+$orange: #F67300;
+$transparent: transparent !important;
+
+
+
+/*--Define Types--*/
+$lato: 'Lato', sans-serif;
+
+h1,h2,h3,h4,h5 {
+    font-family: $lato;
+}
+
+
+.title-special-orange {
+    border-bottom: solid 2px $orange;
+    color: $orange;
+}
+
+.title-special-green {
+    border-bottom: solid 2px $green;
+    color: $green;
+}
+
+.title-special-green, .title-special-orange {
+    text-transform: uppercase;
+    padding-bottom: 15px;
+    font-weight: 600;
+    margin-bottom: 38px;
+    display: block;
+    font-size: 19px;
+    text-align: center;
+}
+
+/*--Define special styles--*/
+$rounded: 120px;
+img.rounded {border-radius: $rounded}
+
+.border-bottom {
+    border-bottom: dotted 1px #ccc;
+}
+
+
+/*--Styles--*/
+
+body {
+    font-family: $lato;
+    width: 100%;
+    overflow-x: hidden;
+    background-color: #F7F7F7;
+}
+
+#main-body {
+    width: 100%;
+    margin: auto;
+}
+
+#globalbb {
+    background-color: $green;
+    width: 100%;
+    position: fixed;
+    z-index: 900;
+}
+
+#container {
+    padding: 75px 0;
+}
+
+
+
+.top-bar {
+    padding: 0.9rem;
+    height: 70px;
+    clear: both;
+}
+
+.top-bar ul {
+    background-color: $transparent;
+}
+
+#globalbb ul.dropdown.menu a {
+    color: $white;
+}
+
+#button-notifs {
+    background-color: $orange;
+    border-radius: 100px;
+}
+
+
+button.close-mobile-menu {
+    position: absolute;
+    top: 12px;
+    right: 20px;
+    font-size: 15px;
+    color: #fff;
+    font-weight: 800;
+    padding: 10px;
+    background-color: $orange;
+    border-radius: 100px;
+    display: block;
+    width: 37px;
+}
+
+.mobile-menu-hide {
+    display:none;
+}
+
+
+#user-menu {
+    width: 220px;
+    text-align: right;
+    position: absolute;
+    right: 56px;
+    top: 18px;
+}
+
+
+div#menu-mobile ul {
+    top: 68px;
+    position: relative;
+    border-top: dotted 1px #333;
+}
+
+#main-menu-button {
+        font-size: 110%;
+    margin-left: 20px;
+    z-index: 51;
+    position: absolute;
+    right: 25px;
+    top: 29px;
+}
+
+
+
+button#b-notifications {
+    text-align: center;
+    width: 10%;
+    background-color: $orange;
+    border-radius: 100px;
+    padding: 10px;
+    text-align: center;
+    min-width: 26px;
+    width: auto;
+    position: relative;
+    z-index: 99;
+    right: 15px;
+}
+
+button#b-user {
+    text-align: left;
+    width: 80%;
+    background: transparent;
+    padding: 0;
+}
+
+button#b-user img {
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+    margin-right: 5%;
+    border: solid 4px $orange;
+}
+
+#user-menu button {
+    border: 0;
+    margin: 0;
+    
+}
+
+
+.menu-icon {
+    width: 32px;
+}
+
+div#menu-mobile {
+background-color: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+}
+
+.mobile-footer-menu {
+    position: relative;
+    top: 65%;
+    color: #fff;
+    height: 35%;
+    border-top: dotted 1px #3E3E3E;
+}
+
+div#menu-mobile ul {
+    margin: 0;
+    padding: 0;
+    
+}
+
+div#menu-mobile ul li {
+    width: 100%;
+    clear: both;
+    display: block;
+}
+
+
+.mobile-footer-menu a {
+    display: block;
+    padding: 25px;
+    color: $white;
+    font-size: 90%;
+}
+
+.mobile-footer-menu a i {
+    font-size: 28px;
+    margin:  3px;
+}
+
+
+.top-bar h5 {
+    display: block;
+    background-image: url('../images/logo_mobile.jpg');
+    content: "";
+    width: 71px;
+    height: 65px;
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: center;
+        position: absolute;
+    left: 12px;
+    top: 0;
+}
+
+#dd-notif {
+    width: 100%;
+    top: 70px;
+    height: 100vh;
+    position: absolute;
+    z-index: 55;
+    background: #fff;
+    left: 0;
+}
+
+#ddnotif::before {
+    content: "";
+    width: 0;
+	height: 0;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-bottom: 100px solid red;
+    position: relative;
+    top: -50px;
+}
+
+#dd-notif .item-card-type1 h4 {
+    font-size: 1.15em;
+    letter-spacing: 0.02em;
+    color: #666;
+}
+
+#dd-notif h3.tab-title {
+    font-weight: 200;
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+
+#overview-details-table {
+    width: 100%;
+    font-size: 1.18em;
+    font-weight: 200;
+    }
+
+div#course-title h1 {
+    font-size: 22px;
+    margin: 20px 0;
+    padding: 0 35px 0 0;
+    position: relative;
+}
+
+div#course-title h1 i {
+    font-size: 28px;
+    position: absolute;
+    right: 0;
+    color: $green;
+    top: 20%; 
+}
+
+/*--Item cards--*/
+
+.item-card-type1 { /* Horizontal card with rounded image, title and subtitle - ideal for faculty names */
+    margin: 0 0 15px 0;
+    line-height: 12px;
+    font-size: 90%;
+}
+
+
+.item-card-type1 img {
+    width: 100%;
+}
+
+.item-card-type1 p {
+    margin: 0 0 5px 0;
+    color: #666;
+}
+
+.item-card-type1 small {
+    color: #BDBDBD;
+}
+
+.item-card-type1 h4 {
+    margin: 0;
+    font-size: 1.45em;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+}
+.item-card-type1 h5 {
+    margin: 0 0 6px 0;
+    font-size: 1.20em;
+    color: #666;
+}
+
+.item-card-type1 .avatar-col {
+    padding: 0;
+}
+
+/*--Tabs and containers--*/
+
+#main-container {
+    background-color: $white;
+    min-height: 505px;
+    overflow: auto;
+    height: auto;
+    padding: 0;
+}
+
+.page-container {
+    border: 0;
+    margin: 0 7%;
+}
+
+
+/*--Notifications bar--*/
+
+ul#notif-bar-tabs {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    border: 0;
+}
+
+ul#notif-bar-tabs li {
+    width: 33.3333%;
+}
+
+#notif-bar-tabs a {
+    font-size: 15px;
+    padding: 14px;
+    background-color: #eee !important;
+    position: relative;
+}
+
+#notif-bar-tabs a i {
+    font-size: 23px;
+    color: #181818;
+}
+
+#notif-bar-tabs a i.got-alert::after {
+ width: 8px;
+    height: 8px;
+    background-color: #f67300;
+    border-radius: 100px;
+    position: absolute;
+    content: "";
+    left: 67%;
+    top: 22px;
+    
+}
+
+#notif-bar-content {
+    margin: 0 auto;
+    max-width: 500px;
+}
+
+#dd-notif .tabs-title>a:hover, #dd-notif .tabs-title>a:focus, #dd-notif .tabs-title>a[aria-selected=true] {
+    border-bottom: solid 3px $orange;
+    padding: 14px 14px 11px 14px;
+}
+
+
+#dd-notif .tabs-panel {
+   height: 82vh;
+    padding: 10px 4%;
+    overflow-y: scroll;
+    
+    }
+
+/*--Cards--*/
+
+#dd-notif .item-card-type1 {
+    padding-bottom: 15px;
+    cursor: pointer;
+    font-size: 80%;
+}
+
+#dd-notif .item-card-type1::last-child {
+    border-bottom: 0;
+}
+    
+#dd-notif .item-card-type1 a {
+    color: #999;
+    }
+
+.item-card-type1 .avatar-col {
+    width: 20%;
+    float: left;
+}
+
+.item-card-type1 .medium-10 {
+        width: 79%;
+    float: right;
+    font-size: 90%;
+    margin: 0;
+    padding: 0 0 0 7%;
+}
+
+
+/*--Dropdowns--*/
+
+
+div#dd-member {
+    width: 250px;
+    position: fixed;
+    top: 64px;
+    text-align: left;
+    right: 32px;
+    border: solid 1px #EAEAEA;
+    min-height: 120px;
+    background-color: #fff;
+}
+
+#dd-member .grey-title {
+    background-color: #eee;
+    height: 51px;
+    text-align: center;
+}
+
+#dd-member .grey-title h4 {
+    font-weight: 200;
+    padding: 9px 0;
+    font-size: 20px;
+}
+
+#dd-member ul li {
+    font-size: 90%;
+}
+
+#dd-member ul li a:hover {
+    color: $orange !important;
+}
+
+#dd-member ul li a, #dd-member ul li i {
+    color: #555;
+}
+
+#main-sidebar {
+    margin: 0 2%;
+    padding: 0;
+    font-size: 18px;
+    background-color: #f7f7f7;
+    width: 100%;
+    position: absolute;
+    top: 155px;
+    z-index: 1;
+    display: none;
+}
+
+#main-sidebar a {
+    color: #666;
+}
+
+#main-sidebar a:hover {
+    color: $orange;
+}
+
+#main-sidebar i {
+    font-size: 30px;
+}
+
+
+.menu-mobile-show {
+    display: block !important;
+}
+
+
+.content-piece {
+    clear: both;
+    width: 100%;
+        margin: 31px 0 0 13px !important;
+    padding-bottom: 15px;
+
+}
+
+
+/*--Medium Screens (Tablets and iPad)--*/
+@media screen and (min-width: 599px) {
+
+#main-sidebar {
+        margin: 0;
+    padding: 0;
+    font-size: 18px;
+    background-color: #f7f7f7;
+    display: block;
+    position: static;
+    width: 25%;
+}
+    
+#main-sidebar a {
+    padding: 20px 12px;
+}
+    
+#main-sidebar i {
+    display: none;
+}
+
+#main-sidebar li.active {
+    background-color: #fff;
+    border-left: solid 5px #f67300;
+}
+    
+
+
+#user-menu {
+    position: fixed;
+    right: 0;
+    width: 35%;
+    max-width: 300px;
+    padding: 0;
+    left: auto;
+}
+    
+button#b-user {
+    width: 120px;
+}
+
+    
+}
+
+
+
+/*--Desktop--*/
+@media screen and (min-width: 1023px) {
+
+.title-special-green, .title-special-orange {
+    text-align: left;
+    display: inline-block;
+}
+    
+.mobile-menu-hide {
+    display:block;
+}
+    
+    
+#main-body {
+    
+}
+
+#dd-notif .tabs-panel {
+    height: 280px;
+}
+
+#main-menu-button {
+    display: none;
+}
+
+#main-sidebar i {
+    display: inline-block;
+}
+    
+div#course-title { 
+      margin: 30px 0; 
+    
+  }
+
+div#course-title h1 {
+    font-size: 2.5em;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+}
+    
+div#menu-mobile {
+    background-color: transparent;
+    top: 0px;
+    height: 1px;
+}
+    
+div#menu-mobile ul {
+    width: 50%;
+    top: 0;
+    height: 71px;
+    float: left;
+    margin-left: 100px;
+}
+
+    
+div#menu-mobile ul li {
+    float: left;
+    display: inline-block;
+    clear: none;
+    width: auto;
+}
+    
+div#menu-mobile ul li h5 {
+    display: none;
+}
+    
+div#menu-mobile ul li a {
+    display: block;
+    padding: 25.5px 19px;
+    font-weight: 600;
+}
+
+div#menu-mobile ul li a:hover {
+    border-bottom: solid 3px $orange;
+}
+
+    
+#user-menu .dropdown-pane.bottom {
+    top: 41px !important;
+    left: auto !important;
+    right: 15px;
+}
+    
+#dd-notif {
+    width: 320px;
+    left: auto;
+    right: 116px;
+    top: 58px;
+    border: solid 1px #EAEAEA;
+    height: 281px;
+    overflow-y: auto;
+}
+
+
+  
+ul#overview-tabs {
+    width: 480px;
+    margin: 20px auto;
+    text-align: center;
+    border: 0;
+}
+    
+ul#overview-tabs li a {
+        padding: 11px 20px;
+    font-size: 0.8em;
+    color: #A3A3A3;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    }
+
+ul#overview-tabs .tabs-title {
+    float: none;
+    display: inline-block;
+}
+    
+    
+div#faculty-list-home {
+    font-size: 98%;
+}    
+    
+div#announcements-list-home {
+    font-size: 83%;
+}
+
+#announcements-list-home .item-card-type1 {
+    padding-bottom: 8px;
+}
+    
+    
+#main-sidebar {
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    background-color: #F7F7F7;
+    display: block;
+    position: static;
+    width: 25%;
+}
+
+    
+    
+#main-sidebar li a {
+    color: #575757;
+    padding: 18px 10px;
+    
+}
+    
+
+#main-sidebar li a:hover {
+    background-color: $white;
+}
+    
+#main-sidebar li.active {
+    background-color: $white;
+    border-left: solid 5px $orange;
+}
+    
+#main-sidebar li.active i {
+    color: $orange;
+}
+    
+#main-sidebar li a i {
+    font-size: 1.85em;
+}
+    
+    .content-piece {
+    clear: both;
+    width: 100%;
+    margin: 60px 0;
+    padding-bottom: 30px;
+
+}
+    
+    button#b-user {
+    width: 200px;
+}
+    
+    
+    
+}
