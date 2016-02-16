@@ -34,11 +34,26 @@ h1,h2,h3,h4,h5 {
     text-transform: uppercase;
     padding-bottom: 15px;
     font-weight: 600;
-    margin-bottom: 38px;
     display: block;
     font-size: 19px;
     text-align: center;
+    margin: 0 auto 40px auto;
 }
+
+
+
+.title-special {
+    text-transform: uppercase;
+    font-weight: 600;
+    display: block;
+    text-align: center;
+    margin: 40px auto;
+    color: $orange;
+    font-size: 1.4em;
+    letter-spacing: 1px;
+}
+
+
 
 /*--Define special styles--*/
 $rounded: 120px;
@@ -509,6 +524,11 @@ div#dd-member {
     padding-bottom: 15px;
 
 }
+
+.announc-item  {
+        border: solid 1px #F3F3F3;
+    padding: 20px;
+} 
 
 
 /*--Medium Screens (Tablets and iPad)--*/
