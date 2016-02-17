@@ -5,14 +5,13 @@
 @import 'motion-ui';
 
 @include foundation-global-styles;
-@include foundation-flex-grid;
+@include foundation-grid;
 @include foundation-typography;
 @include foundation-button;
 @include foundation-forms;
 @include foundation-visibility-classes;
 @include foundation-float-classes;
 @include foundation-accordion;
-@include foundation-accordion-menu;
 @include foundation-badge;
 @include foundation-breadcrumbs;
 @include foundation-button-group;
