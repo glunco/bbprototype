@@ -313,7 +313,7 @@ div#course-title h1 i {
     position: absolute;
     right: 0;
     color: $green;
-    top: 20%; 
+    top: 10%; 
 }
 
 /*--Item cards--*/
@@ -459,11 +459,11 @@ ul#notif-bar-tabs li {
 
 
 div#dd-member {
-    width: 250px;
+    width: 270px;
     position: fixed;
     top: 64px;
     text-align: left;
-    right: 32px;
+    right: 10px;
     border: solid 1px #EAEAEA;
     min-height: 120px;
     background-color: #fff;
@@ -500,7 +500,7 @@ div#dd-member {
     background-color: #f7f7f7;
     width: 100%;
     position: absolute;
-    top: 155px;
+    top: 146px;
     z-index: 1;
     display: none;
 }
@@ -526,9 +526,24 @@ div#dd-member {
 .content-piece {
     clear: both;
     width: 100%;
-        margin: 31px 0 0 13px !important;
+    margin: 15px 0 0 5px !important;
     padding-bottom: 15px;
 
+}
+
+
+#mobile-notifications-overview {
+    font-size: 12px;
+}
+
+#mobile-notifications-overview button {
+    width: 100% !important;
+    font-weight: 600;
+}
+
+#mobile-notifications-overview button i {
+    font-size: 19px;
+    margin-right: 10px;
 }
 
 #announcements-page {
@@ -655,6 +670,18 @@ button#b-user {
 #main-body {
     
 }
+    
+        
+#dd-notif {
+    width: 320px;
+    left: auto;
+    right: 116px;
+    top: 58px;
+    border: solid 1px #EAEAEA;
+    height: 333px;
+    
+}
+
 
 #dd-notif .tabs-panel {
     height: 280px;
@@ -721,16 +748,6 @@ div#menu-mobile ul li a:hover {
     left: auto !important;
     right: 15px;
 }
-    
-#dd-notif {
-    width: 320px;
-    left: auto;
-    right: 116px;
-    top: 58px;
-    border: solid 1px #EAEAEA;
-    height: 281px;
-    overflow-y: auto;
-}
 
 
   
@@ -762,8 +779,15 @@ div#faculty-list-home {
     
 div#announcements-list-home {
     font-size: 83%;
+    position: relative;
 }
 
+#announcements-list-home .b-seeall {
+    position: absolute;
+    right: 0;
+}
+    
+    
 #announcements-list-home .item-card-type1 {
     padding-bottom: 8px;
 }
@@ -814,8 +838,10 @@ div#announcements-list-home {
 }
     
     button#b-user {
-    width: 200px;
+    width: 170px;
 }
+    
+    
     
     
     

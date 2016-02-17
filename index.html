@@ -40,9 +40,9 @@
               
             
             
-            <button class="button hide-for-small-only" type="button" data-toggle="dd-member" id="b-user"><img src="https://www6.slac.stanford.edu/sites/www6.slac.stanford.edu/files/styles/lightbox_large_image/public/images/130123-wakatsuki-full.jpg" /><span class="show-for-large">Mollan Croph</span></button>
+            <button class="button hide-for-small-only" type="button" data-toggle="dd-member" id="b-user"><img src="https://www6.slac.stanford.edu/sites/www6.slac.stanford.edu/files/styles/lightbox_large_image/public/images/130123-wakatsuki-full.jpg" /><span class="show-for-large">My Account</span></button>
               <div class="hide" id="dd-member" data-toggler=".hide">
-                  <div class="grey-title"><h4>My Account</h4></div>
+                  <div class="grey-title"><h4>Roland Mohen</h4></div>
                <ul class="menu vertical">
                   <li class="border-bottom"><a href="#"><i class="icon-author"></i>My Preferences</a></li>   
                   <li class="border-bottom"><a href="#"><i class="icon-setting"></i>My Preferences</a></li>   
@@ -238,7 +238,7 @@
           <a id="b-announcements" href="#"><i class="icon-notification"></i> Announcements</a>
         </li>
         <li class="border-bottom">
-          <a href="#discussions"><i class="icon-folder"></i> Content and Discussions</a>
+          <a id="b-discussion" href="#"><i class="icon-folder"></i> Content and Discussions</a>
         </li>
         <li class="border-bottom">
           <a href="#syllabus"><i class="icon-catalog"></i> Syllabus</a>
@@ -289,6 +289,11 @@
         jQuery("#main-container").load("include/announcements.html");
         });
 
+        jQuery("#b-discussion").click(function(){
+        jQuery("#main-container").load("include/discussion.html");
+        });
+
+        
     });
         
 
