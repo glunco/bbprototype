@@ -53,6 +53,12 @@ h1,h2,h3,h4,h5 {
     letter-spacing: 1px;
 }
 
+.title-special i {
+    font-size: 25px;
+    margin-right: 10px;
+    color: $green;
+}
+
 
 
 /*--Define special styles--*/
@@ -525,10 +531,66 @@ div#dd-member {
 
 }
 
+#announcements-page {
+    
+}
+
+
 .announc-item  {
-        border: solid 1px #F3F3F3;
-    padding: 20px;
+    padding: 0 0 0 0;
+    position: relative;
 } 
+
+.announc-item .announc-head {
+    text-align: right;
+    max-width: 90%;
+    float: left;
+    line-height: 15px;
+    padding-right: 5%;
+    padding-top: 10px;
+    height: 100%;
+    width: 90%;
+}
+
+
+.announc-item .announc-head img {
+    max-width: 95px;
+    width: 65%;
+    float: right;
+    margin-bottom: 5px;
+}
+
+.announc-item .announc-head h5 {
+    clear: both;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.announc-item .announc-head small {
+    margin: 0;
+    color: #838383;
+}
+
+.announc-item .announce-content {
+    border-left: solid 3px $orange;
+    padding: 5px 0 90px 5%;
+    color: $grey;
+    font-size: 15px;
+    line-height: 24px;
+    position: relative;
+}
+
+.announc-item .announce-content::before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    background: $orange;
+    border-radius: 50px;
+    position: absolute;
+    top: 0;
+    left: -10px;
+}
 
 
 /*--Medium Screens (Tablets and iPad)--*/
