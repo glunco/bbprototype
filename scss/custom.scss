@@ -643,6 +643,35 @@ div#dd-member {
     margin-right: 10px;
 }
 
+#resources-content .item-resource {
+    border: dotted 1px #ccc;
+    margin: 0 0 30px 0;
+    cursor: pointer;
+}
+
+#resources-content .item-resource:hover {
+    border: solid 1px #c9c9c9;
+}
+
+#resources-content .item-resource.row .column1 {
+    border-right: dotted 1px #ccc;
+    padding: 20px 0;
+    background-color: #EDEDED;
+}
+
+#resources-content .item-resource.row .column2 {
+    padding: 20px 2%;
+}
+
+
+
+#resources-content .item-resource.row .column3 {
+    border-left: dotted 1px #ccc;
+    padding: 20px 0;
+    color: $green;
+}
+
+
 
 /*--Medium Screens (Tablets and iPad)--*/
 @media screen and (min-width: 599px) {
@@ -696,9 +725,9 @@ button#b-user {
     height: 16px;
     background: $orange;
     border-radius: 50px;
-    position: absolute;
+    position: relative;
     top: 0;
-    left: -6px;
+    left: -8px;
 }
     
     

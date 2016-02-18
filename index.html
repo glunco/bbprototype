@@ -245,7 +245,7 @@
           <a id="b-syllabus" href="#"><i class="icon-catalog"></i> Syllabus</a>
         </li>
         <li class="border-bottom">
-          <a href="#resources"><i class="icon-download"></i> Resources List</a>
+          <a id="b-resources" href="#"><i class="icon-download"></i> Resources List</a>
         </li>
         <li class="border-bottom"> 
           <a href="#assignments"><i class="icon-circle-check"></i> Assignments</a>
@@ -296,6 +296,10 @@
         
         jQuery("#b-syllabus").click(function(){
         jQuery("#main-container").load("include/syllabus.html");
+        });
+        
+        jQuery("#b-resources").click(function(){
+        jQuery("#main-container").load("include/resources.html");
         });
 
         
