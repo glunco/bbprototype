@@ -1165,7 +1165,7 @@ div#button-goto-dashboard a i {
   .article-content {
     width: 99%;
     float: left;
-    font-size: 0.95em;
+    font-size: 1.15em;
     line-height: 26px;
     }
 
@@ -1962,7 +1962,8 @@ h2.filter-title {
 
 
 article.post h1 {
-  font-size: 2.8em;
+  font-size: 2.5em;
+  line-height: 50px;
 }
 
 .discussion-panel .add-comment textarea {
