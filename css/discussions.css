@@ -273,6 +273,15 @@ article.post blockquote {
 #main h1:before, #main h2:before {
   background: none !important; }
 
+#discussions-page h3 {
+    font-size: 14px;
+    text-transform: uppercase;
+    margin: 20px 0 25px 0;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+
 
 
 .article-content {

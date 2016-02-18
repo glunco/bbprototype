@@ -369,11 +369,23 @@ div#course-title h1 i {
     margin: 0 7%;
 }
 
+
+
 .page-container blockquote {
     font-size: 30px;
     border: 0;
     padding: 0;
 }
+
+
+#discussions-page h1 {
+    color: $orange;
+}
+
+#discussions-page h3 {
+    color: $green;
+}
+
 
 
 /*--Notifications bar--*/
@@ -614,6 +626,24 @@ div#dd-member {
 }
 
 
+#syllabus-content {
+    margin: 0 0 50px 0;
+    position: relative;
+}
+
+#syllabus-content h5 {
+    color: $grey;
+    text-transform: uppercase;
+    margin: 0 0 25px 0;
+}
+
+#syllabus-content h5 span {
+    color: $orange;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+
 /*--Medium Screens (Tablets and iPad)--*/
 @media screen and (min-width: 599px) {
 
@@ -655,6 +685,22 @@ button#b-user {
     width: 120px;
 }
 
+#syllabus-content .item-week {
+    padding: 0 0 50px 40px;
+    border-left: solid 4px $orange;
+}
+    
+#syllabus-content .item-week::before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    background: $orange;
+    border-radius: 50px;
+    position: absolute;
+    top: 0;
+    left: -6px;
+}
+    
     
 }
 

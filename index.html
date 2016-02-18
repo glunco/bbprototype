@@ -242,7 +242,7 @@
           <a id="b-discussion" href="#"><i class="icon-folder"></i> Content and Discussions</a>
         </li>
         <li class="border-bottom">
-          <a href="#syllabus"><i class="icon-catalog"></i> Syllabus</a>
+          <a id="b-syllabus" href="#"><i class="icon-catalog"></i> Syllabus</a>
         </li>
         <li class="border-bottom">
           <a href="#resources"><i class="icon-download"></i> Resources List</a>
@@ -292,6 +292,10 @@
 
         jQuery("#b-discussion").click(function(){
         jQuery("#main-container").load("include/discussion.html");
+        });
+        
+        jQuery("#b-syllabus").click(function(){
+        jQuery("#main-container").load("include/syllabus.html");
         });
 
         
