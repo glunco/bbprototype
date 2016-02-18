@@ -18,6 +18,10 @@
       text-decoration: none;
     }
 
+.discussion-title {
+    
+}
+
 
 
 /*--Fixes on original code--*/
@@ -30,6 +34,16 @@ clear: both;
 .banner {
   position: relative;
   z-index: 0 !important; }
+
+
+.discussions-header {
+    width: 100%;
+    overflow: hidden;
+    height: 300px;
+    margin-bottom: 30px;
+}
+
+
 
 
 /*--Discussions panels code--*/
@@ -244,9 +258,16 @@ article-content, article.post h1 {
 }
 
 
+article.post h1 {
+  font-size: 1.8em;
+  }
+
 article.post blockquote {
-  margin: 0 0 30px 0;
-  text-align: left; }
+  margin: 20px 0 30px 0;
+  text-align: left;
+  line-height: 26px;
+  font-size: 1.25em;
+  }
 
 
 #main h1:before, #main h2:before {
@@ -1415,6 +1436,14 @@ div#button-goto-dashboard a i {
 }
 
 
+article.post blockquote {
+  margin: 20px 0 30px 0;
+  text-align: left;
+  line-height: 35px;
+  font-size: 1.6em;
+  }
+
+
 .panel-header .panel-headbar h3 {
   color: #333;
   line-height: 10px !important;
@@ -1487,6 +1516,9 @@ div#button-goto-dashboard a i {
   px;
 }
 
+article.post h1 {
+  font-size: 2em;
+}
 
 span#desktop-close-panel {
   position: absolute;
@@ -1929,7 +1961,9 @@ h2.filter-title {
 
 
 
-
+article.post h1 {
+  font-size: 2.8em;
+}
 
 .discussion-panel .add-comment textarea {
     width: 98%;
