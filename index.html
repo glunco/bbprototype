@@ -248,7 +248,7 @@
           <a id="b-resources" href="#"><i class="icon-download"></i> Resources List</a>
         </li>
         <li class="border-bottom"> 
-          <a href="#assignments"><i class="icon-circle-check"></i> Assignments</a>
+          <a id="b-assignments" href="#"><i class="icon-circle-check"></i> Assignments</a>
         </li>
       </ul>
         </div>          
@@ -300,6 +300,10 @@
         
         jQuery("#b-resources").click(function(){
         jQuery("#main-container").load("include/resources.html");
+        });
+        
+        jQuery("#b-assignments").click(function(){
+        jQuery("#main-container").load("include/assignments.html");
         });
 
         
