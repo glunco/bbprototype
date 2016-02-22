@@ -304,17 +304,18 @@ div#menu-mobile ul li {
 div#course-title h1 {
     font-size: 22px;
     margin: 20px 0;
-    padding: 0 35px 0 0;
+    padding: 0 2% 0 0;
     position: relative;
 }
 
-div#course-title h1 i {
-    font-size: 28px;
-    position: absolute;
-    right: 0;
-    color: $green;
-    top: 10%; 
+    
+.button-down-arrow {
+    float: right;
+    max-width: 25px;
 }
+
+
+
 
 /*--Item cards--*/
 
@@ -353,6 +354,25 @@ div#course-title h1 i {
 .item-card-type1 .avatar-col {
     padding: 0;
 }
+
+.item-card-type1 .avatar-empty {
+    text-align: center;
+    color: #fff;
+}
+
+.item-card-type1 .avatar-empty span {
+    background-color: #B1B1B1;
+    display: block;
+    border-radius: 120px;
+    padding: 15px;
+    width: 59px;
+    height: 59px;
+}
+
+.item-card-type1 .avatar-empty span i {
+    font-size: 28px;
+}
+
 
 /*--Tabs and containers--*/
 
@@ -968,6 +988,17 @@ div#course-title h1 {
     letter-spacing: 0.04em;
     cursor: pointer;
 }
+
+    
+/*
+    div#course-title h1 i {
+    font-size: 28px;
+    position: absolute;
+    right: 0;
+    color: $green;
+    top: 10%; 
+}
+    */
     
 div#menu-mobile {
     background-color: transparent;

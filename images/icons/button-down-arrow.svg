@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="22px" height="16px" viewBox="0 0 22 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.5.1 (25234) - http://www.bohemiancoding.com/sketch -->
+    <title>Line Copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Overview---Mobile" sketch:type="MSArtboardGroup" transform="translate(-273.000000, -82.000000)" stroke="#CACACA" stroke-width="4" stroke-linecap="square">
+            <path d="M280.187143,90.6419898 L288.61657,90.6419898 L289.5571,90.6419898 L289.5571,92.5230486 L288.61657,92.5230486 L279.246613,92.5230486 L278.306084,92.5230486 L278.306084,92.0527839 L278.306084,91.5825192 L278.306084,82.2806645 L278.306084,81.3401351 L280.187143,81.3401351 L280.187143,82.2806645 L280.187143,90.6419898 Z" id="Line-Copy" sketch:type="MSShapeGroup" transform="translate(283.931592, 86.931592) rotate(-45.000000) translate(-283.931592, -86.931592) "></path>
+        </g>
+    </g>
+</svg>
