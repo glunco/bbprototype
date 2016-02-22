@@ -1,6 +1,5 @@
-
 <!doctype html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="en" ng-app="course">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -12,14 +11,10 @@
 
   </head>
   <body>
-      
-      
-      
-        <div class="top-bar" id="globalbb">
+      <div class="top-bar" id="globalbb">
         <h5><span class="hide">University of Miami</span></h5>
         <button class="menu-icon" id="main-menu-button" data-toggle="menu-mobile"></button>
         <div id="menu-mobile" class="top-bar-left mobile-menu-hide" data-toggler=".mobile-menu-hide">
-            
             
           <button class="close-mobile-menu hide-for-large" data-toggle="menu-mobile">X</button>
           <ul class="dropdown menu" id="mainmenu">
@@ -54,159 +49,55 @@
 
         </div>
         <!--/Ends Right menu-->
-        <div id="dd-notif" class="hide" data-toggler=".hide">
-               <ul class="tabs" data-tabs id="notif-bar-tabs">
-                <li class="tabs-title is-active"><a href="#t-news" aria-selected="true"><i class="icon-notification got-alert"></i></a></li>
-                <li class="tabs-title"><a href="#t-notifs"><i class="icon-flag"></i></a></li>
-                   <li class="tabs-title"><a href="#t-inbox"><i class="icon-message got-alert"></i></a></li>
-              </ul>
+        <div id="dd-notif" class="hide" data-toggler=".hide" ng-controller="notificationsCtrl as panel">
+          <ul class="tabs" data-tabs id="notif-bar-tabs">
+            <li class="tabs-title is-active"><a href="#t-news" aria-selected="true"><i class="icon-notification got-alert"></i></a></li>
+            <li class="tabs-title"><a href="#t-notifs"><i class="icon-flag"></i></a></li>
+            <li class="tabs-title"><a href="#t-inbox"><i class="icon-message got-alert"></i></a></li>
+          </ul>
                
-            
-            
-            
-            
-            <div class="page-container" data-page-container="notif-tabs" id="notif-bar-content">
-                        <div class="tabs-panel is-active" id="t-news">
-                            
-                            
-                            <h3 class="tab-title">All Announcements</h3>
-                            
-                            <div class="item-card-type1 border-bottom row">
-                                <div class="avatar-col large-2 medium-2 columns"><img class="rounded" src="images/avatar-profesor.jpg" /></div>
-                                <div class="large-10 medium-10 columns">
-                                  <a><h4>Benjamin Boyd</h4><p>Published an announcement: Lorem ipsum dolor sit amet, consectetur adipiscing...</p></a>
-                                    <small>8 hous ago</small>
-                                  </div>
-                            </div>
-                            
-                            <div class="item-card-type1 border-bottom row">
-                                <div class="avatar-col large-2 medium-2 columns"><img class="rounded" src="images/avatar-profesor.jpg" /></div>
-                                <div class="large-10 medium-10 columns">
-                                  <a><h4>Benjamin Boyd</h4><p>Published an announcement: Lorem ipsum dolor sit amet, consectetur adipiscing...</p></a>
-                                    <small>8 hous ago</small>
-                                  </div>
-                            </div>
-                            
-                            <div class="item-card-type1 border-bottom row">
-                                <div class="avatar-col large-2 medium-2 columns"><img class="rounded" src="images/avatar-profesor.jpg" /></div>
-                                <div class="large-10 medium-10 columns">
-                                  <a><h4>Benjamin Boyd</h4><p>Published an announcement: Lorem ipsum dolor sit amet, consectetur adipiscing...</p></a>
-                                    <small>8 hous ago</small>
-                                  </div>
-                            </div>
-                            
-                            <div class="item-card-type1 border-bottom row">
-                                <div class="avatar-col large-2 medium-2 columns"><img class="rounded" src="images/avatar-profesor.jpg" /></div>
-                                <div class="large-10 medium-10 columns">
-                                  <a><h4>Benjamin Boyd</h4><p>Published an announcement: Lorem ipsum dolor sit amet, consectetur adipiscing...</p></a>
-                                    <small>8 hous ago</small>
-                                  </div>
-                            </div>
-                            
-                            <div class="item-card-type1 border-bottom row">
-                                <div class="avatar-col large-2 medium-2 columns"><img class="rounded" src="images/avatar-profesor.jpg" /></div>
-                                <div class="large-10 medium-10 columns">
-                                  <a><h4>Benjamin Boyd</h4><p>Published an announcement: Lorem ipsum dolor sit amet, consectetur adipiscing...</p></a>
-                                    <small>8 hous ago</small>
-                                  </div>
-                            </div>
-                            
-                            
-                            <div class="item-card-type1 border-bottom row">
-                                <div class="avatar-col large-2 medium-2 columns"><img class="rounded" src="images/avatar-profesor.jpg" /></div>
-                                <div class="large-10 medium-10 columns">
-                                  <a><h4>Benjamin Boyd</h4><p>Published an announcement: Lorem ipsum dolor sit amet, consectetur adipiscing...</p></a>
-                                    <small>8 hous ago</small>
-                                  </div>
-                            </div>
-                            
-    
-                        </div>
+          <div class="page-container" data-page-container="notif-tabs" id="notif-bar-content">
+            <div class="tabs-panel is-active" id="t-news">
+                <h3 class="tab-title">All Announcements</h3>
                 
-                
-                
-                
-                
-                
-                        <div class="tabs-panel" id="t-notifs">
+                <div class="item-card-type1 border-bottom row" ng-repeat="announcement in panel.allAnnouncements">
+                    <div class="large-12 medium-12 columns">
+                      <a>
+                        <h4>{{ announcement.title }}</h4>
+                        <p>{{ announcement.body | htmlToPlaintext }}</p>
+                      </a>
+                      <small>{{ announcement.created }}</small>
+                    </div>
+                </div>
+            </div>
 
-                             <h3 class="tab-title">Notifications</h3>                          
+            <div class="tabs-panel" id="t-notifs">
+
+                 <h3 class="tab-title">Notifications</h3>                          
+                
+                <div class="item-card-type1 border-bottom row" ng-repeat="announcement in panel.courseAnnouncements">
+                    <div class="large-12 medium-12 columns">
+                      <a>
+                        <h4>{{ announcement.title }}</h4>
+                        <p>{{ announcement.body | htmlToPlaintext }}</p>
+                      </a>
+                      <small>{{ announcement.created }}</small>
+                    </div>
+                </div>                            
+            </div>
+
+            <div class="tabs-panel" id="t-inbox">              
+              <h3 class="tab-title">Messages</h3>                         
                             
-                            <div class="item-card-type1 border-bottom row">
-                                <div class="avatar-col large-2 medium-2 columns"><img class="rounded" src="images/avatar-profesora.jpg" /></div>
-                                <div class="large-10 medium-10 columns">
-                                  <a><h4>Florette Perez</h4><p>Published an announcement: Lorem ipsum dolor sit amet, consectetur adipiscing...</p></a>
-                                    <small>8 hous ago</small>
-                                  </div>
-                            </div>
-                            
-                            <div class="item-card-type1 border-bottom row">
-                                <div class="avatar-col large-2 medium-2 columns"><img class="rounded" src="images/avatar-profesor.jpg" /></div>
-                                <div class="large-10 medium-10 columns">
-                                  <a><h4>Benjamin Boyd</h4><p>Published an announcement: Lorem ipsum dolor sit amet, consectetur adipiscing...</p></a>
-                                    <small>8 hous ago</small>
-                                  </div>
-                            </div>
-                            
-                            <div class="item-card-type1 border-bottom row">
-                                <div class="avatar-col large-2 medium-2 columns"><img class="rounded" src="images/avatar-profesor.jpg" /></div>
-                                <div class="large-10 medium-10 columns">
-                                  <a><h4>Benjamin Boyd</h4><p>Published an announcement: Lorem ipsum dolor sit amet, consectetur adipiscing...</p></a>
-                                    <small>8 hous ago</small>
-                                  </div>
-                            </div>
-                            
-                            <div class="item-card-type1 border-bottom row">
-                                <div class="avatar-col large-2 medium-2 columns"><img class="rounded" src="images/avatar-profesor.jpg" /></div>
-                                <div class="large-10 medium-10 columns">
-                                  <a><h4>Benjamin Boyd</h4><p>Published an announcement: Lorem ipsum dolor sit amet, consectetur adipiscing...</p></a>
-                                    <small>8 hous ago</small>
-                                  </div>
-                            </div>
-                            
-                            
-                        </div>
-                        <div class="tabs-panel" id="t-inbox">
-                          
-                            
-                            <h3 class="tab-title">Messages</h3>                         
-                            
-                            <div class="item-card-type1 border-bottom row">
-                                <div class="avatar-col large-2 medium-2 columns"><img class="rounded" src="images/avatar-profesor.jpg" /></div>
-                                <div class="large-10 medium-10 columns">
-                                  <a><h4>Benjamin Boyd</h4><p>Published an announcement: Lorem ipsum dolor sit amet, consectetur adipiscing...</p></a>
-                                    <small>8 hous ago</small>
-                                  </div>
-                            </div>
-                            
-                            <div class="item-card-type1 border-bottom row">
-                                <div class="avatar-col large-2 medium-2 columns"><img class="rounded" src="images/avatar-profesora.jpg" /></div>
-                                <div class="large-10 medium-10 columns">
-                                  <a><h4>Florette Perez</h4><p>Published an announcement: Lorem ipsum dolor sit amet, consectetur adipiscing...</p></a>
-                                    <small>8 hous ago</small>
-                                  </div>
-                            </div>
-                            
-                            <div class="item-card-type1 border-bottom row">
-                                <div class="avatar-col large-2 medium-2 columns"><img class="rounded" src="images/avatar-profesor.jpg" /></div>
-                                <div class="large-10 medium-10 columns">
-                                  <a><h4>Benjamin Boyd</h4><p>Published an announcement: Lorem ipsum dolor sit amet, consectetur adipiscing...</p></a>
-                                    <small>8 hous ago</small>
-                                  </div>
-                            </div>
-                            
-                            <div class="item-card-type1 border-bottom row">
-                                <div class="avatar-col large-2 medium-2 columns"><img class="rounded" src="images/avatar-profesor.jpg" /></div>
-                                <div class="large-10 medium-10 columns">
-                                  <a><h4>Benjamin Boyd</h4><p>Published an announcement: Lorem ipsum dolor sit amet, consectetur adipiscing...</p></a>
-                                    <small>8 hous ago</small>
-                                  </div>
-                            </div>
-                            
-                            
-                            
-                        </div>
-                      </div>
+              <div class="item-card-type1 border-bottom row">
+                  <div class="avatar-col large-2 medium-2 columns"><img class="rounded" src="images/avatar-profesor.jpg" /></div>
+                  <div class="large-10 medium-10 columns">
+                    <a><h4>Benjamin Boyd</h4><p>Published an announcement: Lorem ipsum dolor sit amet, consectetur adipiscing...</p></a>
+                      <small>8 hous ago</small>
+                    </div>
+              </div>
+            </div>
+          </div>
         </div>   
       </div>
         
@@ -266,13 +157,13 @@
 
     </div>
     </div>
-   <script src="bower_components/jquery/dist/jquery.js"></script>
+
+    <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/what-input/what-input.js"></script>
     <script src="bower_components/foundation-sites/dist/foundation.js"></script>
-    <script src="js/app.js"></script>
-         
-
-      
+    <script>
+      $(document).foundation();
+    </script>
       
    <script type="text/javascript">
 
@@ -317,7 +208,12 @@
 
     </script>
 
-         
+    <script src="/node_modules/angular/angular.min.js"></script>
+    <script src="/node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="/app/app.js"></script>
+    <script src="/app/filters.js"></script>
+    <script src="/app/services/announcements.js"></script>
+    <script src="/app/controllers/notificationsCtrl.js"></script>
  
   </body>
 </html>
