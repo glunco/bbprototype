@@ -1,10 +1,10 @@
  <!--Overview nav-->
           <ul class="horizontal menu show-for-large" data-magellan id="overview-tabs">
-            <li class=""><a href="#overview1">Overview</a></li>
-            <li class=""><a href="#overview2">Materials</a></li>
-              <!--<li class="tabs-title"><a href="#overview3">Schedule</a></li>-->
-              <li class=""><a href="#overview4">Assesment</a></li>
-              <li class=""><a href="#overview5">Policies</a></li>
+            <li class=""><a ui-sref="overview({ '#': 'overview1'})">Overview</a></li>
+            <li class=""><a ui-sref="overview({ '#': 'overview2'})">Materials</a></li>
+              <!--<li class="tabs-title"><a ui-sref="overview({ '#': 'overview3'})">Schedule</a></li>-->
+              <li class=""><a ui-sref="overview({ '#': 'overview4'})">Assesment</a></li>
+              <li class=""><a ui-sref="overview({ '#': 'overview5'})">Policies</a></li>
           </ul>
           
           <div class="page-container" data-page-container="overview-tabs">
@@ -36,7 +36,7 @@
                   </div>
                   
                   <div id="announcements-list-home" class="large-6 medium-12 columns hide-for-small-only">
-                         <button class="b-seeall secondary hollow button" href="#">See All</button>
+                         <button class="b-seeall secondary hollow button" ui-sref="announcements">See All</button>
                        <h4 class="title-special-orange">Announcements</h4>
                         <div class="item-card-type1 border-bottom row">
                         <div class="avatar-col large-2 medium-2 columns"><img class="rounded" src="images/avatar-profesor.jpg" /></div>
