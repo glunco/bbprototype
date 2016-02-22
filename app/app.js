@@ -11,7 +11,13 @@ angular.module('course', ['ui.router', 'angularMoment'])
 		
 		.state('announcements', {
 			url: "/announcements",
-			templateUrl: 'include/announcements.html'
+			templateUrl: 'include/announcements.html',
+			controller: 'announcementsCtrl as announcements',
+			resolve: {
+				announcements: function($announcements) {
+					return $announcements.getAll();
+				}
+			}
 		})
 		
 		.state('discussion', {
