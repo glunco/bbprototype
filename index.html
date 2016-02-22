@@ -305,7 +305,12 @@
         jQuery("#b-assignments").click(function(){
         jQuery("#main-container").load("include/assignments.html");
         });
-
+        
+        
+        $('#border-bottom').on('click', function() {
+            $('active').removeClass('active');
+            $(this).addClass('active');
+        });
         
     });
         
