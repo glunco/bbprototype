@@ -232,22 +232,22 @@
         
         <div id="menu-course">
           <ul class="vertical menu">
-        <li class="active border-bottom">
+        <li class="v-button active border-bottom">
           <a id="b-overview" href="#"><i class="icon-home"></i> Course Overview</a>
         </li>
-        <li class="border-bottom">
+        <li class="v-button border-bottom">
           <a id="b-announcements" href="#"><i class="icon-notification"></i> Announcements</a>
         </li>
-        <li class="border-bottom">
+        <li class="v-button border-bottom">
           <a id="b-discussion" href="#"><i class="icon-folder"></i> Content and Discussions</a>
         </li>
-        <li class="border-bottom">
+        <li class="v-button border-bottom">
           <a id="b-syllabus" href="#"><i class="icon-catalog"></i> Syllabus</a>
         </li>
-        <li class="border-bottom">
+        <li class="v-button border-bottom">
           <a id="b-resources" href="#"><i class="icon-download"></i> Resources List</a>
         </li>
-        <li class="border-bottom"> 
+        <li class="v-button border-bottom"> 
           <a id="b-assignments" href="#"><i class="icon-circle-check"></i> Assignments</a>
         </li>
       </ul>
@@ -305,14 +305,15 @@
         jQuery("#b-assignments").click(function(){
         jQuery("#main-container").load("include/assignments.html");
         });
-        
-        
-        $('#border-bottom').on('click', function() {
-            $('active').removeClass('active');
-            $(this).addClass('active');
-        });
-        
+   
     });
+       
+       
+        jQuery('.v-button ').on('click', function() {
+            jQuery('.active').removeClass('active');
+            jQuery(this).addClass('active');
+        });
+       
         
 
     </script>
