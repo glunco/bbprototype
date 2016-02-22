@@ -568,36 +568,60 @@ div#dd-member {
     
 }
 
-
 .announc-item  {
     padding: 0 0 0 0;
     position: relative;
 } 
 
 .announc-item .announc-head {
-    text-align: right;
-    max-width: 90%;
+    text-align: center;
+    max-width: 95%;
     float: left;
     line-height: 15px;
     padding-right: 5%;
     padding-top: 10px;
     height: 100%;
-    width: 90%;
+    width: 90%
 }
 
 
+.announc-item .announc-head span {
+    background-color: $green;
+    display: block;
+    padding: 25px;
+    text-align: center;
+    width: 90px;
+    height: 90px;
+    clear: both;
+    border-radius: 120px;
+    margin: auto;
+    border-radius: $rounded;
+}
+
+
+.announc-item .announc-head span img.ann-svg {
+    width: 90px;
+}
+
+
+/*
 .announc-item .announc-head img {
     max-width: 95px;
     width: 65%;
     float: right;
     margin-bottom: 5px;
 }
+*/
 
 .announc-item .announc-head h5 {
     clear: both;
     font-size: 16px;
     font-weight: 600;
     margin-bottom: 0;
+    text-align: center;
+    margin-top: 16px;
+    text-transform: uppercase;
+    color: #8C8C8C;
 }
 
 .announc-item .announc-head small {
@@ -607,7 +631,7 @@ div#dd-member {
 
 .announc-item .announce-content {
     border-left: solid 3px $orange;
-    padding: 5px 0 90px 5%;
+    padding: 5px 0 50px 5%;
     color: $grey;
     font-size: 15px;
     line-height: 24px;
