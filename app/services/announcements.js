@@ -1,14 +1,13 @@
-function $announcements($http) {
+function $announcements($http, endpoint) {
 	return {
 		get: function(id) {
-			return $http.get('fixtures/' + id + '.json')
+			return $http.get(endpoint + '/announcements/' + id);
 		},
 
 		getAll: function() {
-			return $http.get('fixtures/all.json')
+			return $http.get(endpoint + '/announcements/all')
 		}
 	}
 }
 
-angular.module('course')
-.factory('$announcements', $announcements);
+angular.module('course').factory('$announcements', $announcements);

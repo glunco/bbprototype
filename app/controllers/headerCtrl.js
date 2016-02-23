@@ -1,5 +1,7 @@
-function notificationsCtrl($announcements) {
+function headerCtrl($announcements, $users) {
 	var self = this;
+
+	self.user = {};
 
 	self.courseAnnouncements = [];
 	self.allAnnouncements = [];
@@ -11,6 +13,11 @@ function notificationsCtrl($announcements) {
 	$announcements.getAll().success(function(data) {
 		self.allAnnouncements = data;
 	});
+
+	$users.get().success(function(data) {
+		self.user = data;
+	});
+
 }
 
-angular.module('course').controller('notificationsCtrl', notificationsCtrl);
+angular.module('course').controller('headerCtrl', headerCtrl);

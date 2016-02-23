@@ -1,8 +1,6 @@
 angular.module('course', ['ui.router', 'angularMoment'])
 .constant('courseId', '_3_1')
-.constant('endpoints', {
-	announcements: 'fixtures/'
-})
+.constant('endpoint', 'fixtures')
 .config(function($stateProvider, $urlRouterProvider) {
 	$urlRouterProvider.otherwise('/overview');
 
