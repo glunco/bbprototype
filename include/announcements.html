@@ -7,7 +7,10 @@
         
         <div class="announc-item large-12 medium-12 small-12 columns" ng-repeat="announcement in announcements.all">
             <div class="announc-info large-3 medium-4 small-3 columns">
-                <div class="announc-head"><span><img class="ann-svg" src="images/icons/icon-speaker.svg" /></span><h5 class="text-right">9 hours ago</h5></div>
+                <div class="announc-head">
+                    <span><img class="ann-svg" src="images/icons/icon-speaker.svg" /></span>
+                    <h5 class="text-right" am-time-ago="announcement.created | amParse: 'YYYY-MM-DD'"></h5>
+                </div>
 
             </div>
             <div class="announce-content large-9 medium-8 small-9 columns">

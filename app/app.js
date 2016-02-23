@@ -1,12 +1,21 @@
 angular.module('course', ['ui.router', 'angularMoment'])
 .constant('courseId', '_3_1')
+.constant('endpoints', {
+	announcements: 'fixtures/'
+})
 .config(function($stateProvider, $urlRouterProvider) {
 	$urlRouterProvider.otherwise('/overview');
 
 	$stateProvider
 		.state('overview', {
 			url: "/overview",
-			templateUrl: 'include/overview.html'
+			templateUrl: 'include/overview.html',
+			controller: 'overviewCtrl as overview',
+			resolve: {
+				announcements: function($announcements, courseId) {
+					return $announcements.get(courseId);
+				}
+			}
 		})
 		
 		.state('announcements', {

@@ -1,5 +1,5 @@
 angular.module('course')
-	.filter('htmlToPlaintext', function() {
+	.filter('cleanText', function() {
 		return function(text) {
 			return  text ? String(text).replace(/<[^>]+>/gm, '') : '';
 		};

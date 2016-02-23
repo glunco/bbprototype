@@ -60,7 +60,7 @@
               <div class="large-10 medium-10 columns">
                 <a>
                   <h4>{{ announcement.title }}</h4>
-                  <p>{{ announcement.body | htmlToPlaintext }}</p>
+                  <p>{{ announcement.body | cleanText }}</p>
                 </a>
                 <small am-time-ago="announcement.created | amParse: 'YYYY-MM-DD'"></small>
               </div>
@@ -75,7 +75,7 @@
               <div class="large-10 medium-10 columns">
                 <a>
                   <h4>{{ announcement.title }}</h4>
-                  <p>{{ announcement.body | htmlToPlaintext }}</p>
+                  <p>{{ announcement.body | cleanText }}</p>
                 </a>
                 <small am-time-ago="announcement.created | amParse: 'YYYY-MM-DD'"></small>
               </div>
@@ -179,5 +179,6 @@
     
     <script src="app/controllers/notificationsCtrl.js"></script>
     <script src="app/controllers/announcementsCtrl.js"></script>
+    <script src="app/controllers/overviewCtrl.js"></script>
   </body>
 </html>
