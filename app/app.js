@@ -1,5 +1,5 @@
 angular.module('course', ['ui.router', 'angularMoment'])
-
+.constant('courseId', '_3_1')
 .config(function($stateProvider, $urlRouterProvider) {
 	$urlRouterProvider.otherwise('/overview');
 
@@ -14,8 +14,8 @@ angular.module('course', ['ui.router', 'angularMoment'])
 			templateUrl: 'include/announcements.html',
 			controller: 'announcementsCtrl as announcements',
 			resolve: {
-				announcements: function($announcements) {
-					return $announcements.getAll();
+				announcements: function($announcements, courseId) {
+					return $announcements.get(courseId);
 				}
 			}
 		})
