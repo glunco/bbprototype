@@ -1,19 +1,19 @@
 <div class="page-container">
     <div class="row text-center">
-    <h1 class="text-center title-special"><i class="icon-notification"></i> ANNOUNCEMENTS</h1>
+    <h1 class="text-center title-special">ANNOUNCEMENTS</h1>
     </div>
 
     <div id="announcements-page" class="row announc-list">
         
         <div class="announc-item large-12 medium-12 small-12 columns" ng-repeat="announcement in announcements.all">
-            <div class="announc-info large-3 medium-4 small-3 columns">
+            <div class="announc-info large-2 medium-4 small-3 columns">
                 <div class="announc-head">
                     <span><img class="ann-svg" src="images/icons/icon-speaker.svg" /></span>
                     <h5 class="text-right" am-time-ago="announcement.created | amParse: 'YYYY-MM-DD'"></h5>
                 </div>
 
             </div>
-            <div class="announce-content large-9 medium-8 small-9 columns">
+            <div class="announce-content large-10 medium-8 small-9 columns">
                 <h4>{{ announcement.title }}</h4>
                 <div ng-bind-html="announcement.body | raw"></div>
                 <!-- <p><a href="#">Read More...</a></p> -->
