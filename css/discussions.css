@@ -39,8 +39,11 @@ clear: both;
 .discussions-header {
     width: 100%;
     overflow: hidden;
-    height: 300px;
+    height: 280px;
     margin-bottom: 30px;
+    position: absolute;
+    left: 0;
+    background-position: center;
 }
 
 
@@ -51,7 +54,7 @@ clear: both;
 .post {
   background: #fff;
   max-width: 1200px;
-  margin: 0 auto 150px;
+  margin: 0 auto 70px;
   padding: 40px 50px 0;
   position: relative;
   z-index: 1; }
@@ -1176,6 +1179,7 @@ div#button-goto-dashboard a i {
     float: left;
     font-size: 1.15em;
     line-height: 26px;
+    padding-top: 307px;
     }
 
   
