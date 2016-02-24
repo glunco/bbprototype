@@ -1,5 +1,6 @@
 angular.module('course', ['ui.router', 'angularMoment'])
 .constant('courseId', '_3_1')
+//.constant('endpoint', 'http://localhost:9876/webapps/MWPS-Classroom-BBLEARN/app/classroom')
 .constant('endpoint', 'fixtures')
 .config(function($stateProvider, $urlRouterProvider) {
 	$urlRouterProvider.otherwise('/overview');
